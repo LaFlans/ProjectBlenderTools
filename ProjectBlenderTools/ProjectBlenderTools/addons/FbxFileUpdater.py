@@ -50,7 +50,7 @@ class UpdateFbxFile(Operator):
 
     bl_idname = "object.create_object"
     bl_label = "FBXファイル更新"
-    bl_description = "最後に保存したFBXファイルを更新します"
+    bl_description = "指定したFBXファイルを更新します"
     bl_options = {'REGISTER', 'UNDO'}
 
     comment: StringProperty(default="FBXファイルを更新したよ！", options={'HIDDEN'})
@@ -88,7 +88,7 @@ class VIEW3D_PT_CustomPanel(Panel):
 
 # メニューを構築する関数
 def menu_fn_1(self, context):
-    self.layout.operator(VIEW3D_PT_CustomPanel.bl_idname, text="項目 2", icon='PLUGIN')
+    self.layout.operator(VIEW3D_PT_CustomPanel.bl_idname, text="", icon='PLUGIN')
 
 # Blenderに登録するクラス
 classes = [
